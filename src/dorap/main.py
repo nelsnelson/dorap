@@ -57,5 +57,3 @@ def init():
             daemon.start(args)
     else:
         args_parser.print_help()
-
-init()

@@ -71,7 +71,7 @@ def start(args):
 
     if pid == 0:
         _LOG.info('Starting process {pid}'.format(pid=pid))
-        start_pyrox(pyrox_cfg)
+        start_pyrox(cfg=pyrox_cfg)
         sys.exit(0)
     else:
         _active_children_pids.append(pid)
