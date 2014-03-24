@@ -33,6 +33,12 @@ args_parser.add_argument(
         Sets the logging output to quiet. This supercedes enabling the
         debug output switch.""")
 
+args_parser.add_argument(
+    'start',
+    required=True,
+    help="""
+        Starts the daemon.""")
+
 
 def init():
     if len(sys.argv) > 1:
