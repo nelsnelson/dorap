@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PYTHONPATH=/usr/share/dorap/lib/python python - <<EOF
+PYTHONPATH=/usr/share/dorap/lib/python python - $@ <<EOF
 import dorap.main
 dorap.main.init()
 EOF
