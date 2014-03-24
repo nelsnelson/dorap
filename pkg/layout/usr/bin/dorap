@@ -1,4 +1,4 @@
-#!/bin/env python
+#!/bin/bin/env python
 
 import sys
 sys.path.append('/usr/share/dorap/lib/python')
