@@ -34,8 +34,14 @@ args_parser.add_argument(
         debug output switch.""")
 
 args_parser.add_argument(
-    'start',
+    '-u', '--upstream-host',
+    dest='upstream_host',
     required=True,
+    help="""
+        Sets the upstream host to proxy HTTP information to..""")
+
+args_parser.add_argument(
+    'start',
     help="""
         Starts the daemon.""")
 
@@ -51,3 +57,5 @@ def init():
             daemon.start(args)
     else:
         args_parser.print_help()
+
+init()
