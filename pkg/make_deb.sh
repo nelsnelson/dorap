@@ -5,7 +5,7 @@ PROJECT_VERSION="$(cat ../src/dorap/VERSION)"
 
 # Build the artifact
 pushd ../;
-python ./build.py ${PROJECT_NAME};
+chuckbox pack ${PROJECT_NAME};
 popd;
 
 # Generate the debian
