@@ -18,7 +18,7 @@ args_parser.add_argument(
     help="""Prints the version.""")
 
 args_parser.add_argument(
-    '-d', '--debug',
+    '-D', '--debug',
     dest='wants_debug',
     action='store_true',
     default=False,
@@ -32,6 +32,7 @@ args_parser.add_argument(
     help="""
         Sets the logging output to quiet. This supercedes enabling the
         debug output switch.""")
+
 
 def init():
     if len(sys.argv) > 1:

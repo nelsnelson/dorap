@@ -8,6 +8,8 @@ import multiprocessing
 
 from chuckbox.log import get_logger, get_log_manager
 
+from pyrox.server.daemon import start_pyrox
+from pyrox.util.config import load_config, ConfigurationError
 
 _LOG = get_logger(__name__)
 _active_children_pids = list()
@@ -35,6 +37,16 @@ def stop_parent(signum, frame):
         _LOG.info('Waiting for children to clean up...')
 
 
+def load_pyrox_config(upstream_host, location='/etc/pyrox/pyrox.conf'):
+    defaults = {
+        'routing': {
+            'upstream_hosts': upstream_host
+        }
+    }
+
+    return load_config('pyrox.server.config', location, defaults)
+
+
 def start(args):
     # Init logging
     if not args.wants_quiet:
@@ -51,18 +63,20 @@ def start(args):
     # Global var for child pids
     global _active_children_pids
 
-    # Spin a process for each mount
-#    for mount_config in configuration['mounts']:
-#        pid = os.fork()
-#
-#        if pid == 0:
-#            _LOG.info('Starting process {pid}'.format(pid=pid))
-            # START PROCESS HOOK
-#            sys.exit(0)
-#        else:
-#            _active_children_pids.append(pid)
+    # Load the Pyrox config
+    pyrox_cfg = load_pyrox_config(args.upstream_host)
 
-    _LOG.info('Your plugin was started and exited! The daemon hooks are not quite there yet :)')
+    # Fork!
+    pid = os.fork()
+
+    if pid == 0:
+        _LOG.info('Starting process {pid}'.format(pid=pid))
+        start_pyrox(pyrox_cfg)
+        sys.exit(0)
+    else:
+        _active_children_pids.append(pid)
+
+    _LOG.info('dorap started')
 
     # Take over SIGTERM and SIGINT
     signal.signal(signal.SIGTERM, stop_parent)

@@ -1,2 +1,3 @@
 psutil>=1.2.1
 chuckbox>=0.1.5
+pyrox>=0.4.0
