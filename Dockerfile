@@ -11,7 +11,7 @@ RUN wget -q -O - http://pkg.ohthree.com/signing.gpg.key | apt-key add -
 RUN apt-get update
 
 # Get Pyrox
-RUN apt-get install pyrox dorap -y
+RUN apt-get install dorap -y
 
 # Cleanup
 RUN apt-get purge wget -y
