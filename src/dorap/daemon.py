@@ -62,7 +62,7 @@ def start(args):
 #        else:
 #            _active_children_pids.append(pid)
 
-    _LOG.info('Started')
+    _LOG.info('Your plugin was started and exited! The daemon hooks are not quite there yet :)')
 
     # Take over SIGTERM and SIGINT
     signal.signal(signal.SIGTERM, stop_parent)

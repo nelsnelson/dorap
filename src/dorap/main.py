@@ -3,7 +3,6 @@ import sys
 import argparse
 
 import chuckbox.project as project
-
 import dorap.daemon as daemon
 
 
@@ -34,14 +33,14 @@ args_parser.add_argument(
         Sets the logging output to quiet. This supercedes enabling the
         debug output switch.""")
 
+def init():
+    if len(sys.argv) > 1:
+        args = args_parser.parse_args()
 
-if len(sys.argv) > 1:
-    args = args_parser.parse_args()
-
-    if args.wants_version:
-        version = project.about('dorap').version
-        print('dorap version: {}'.format(version))
+        if args.wants_version:
+            version = project.about('dorap').version
+            print('dorap version: {}'.format(version))
+        else:
+            daemon.start(args)
     else:
-        daemon.start(args)
-else:
-    args_parser.print_help()
+        args_parser.print_help()
