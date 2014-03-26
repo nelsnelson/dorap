@@ -57,9 +57,11 @@ Docker-Version: 0.0.9
     "cmd": "auth",
     "path": "/_auth",
 
-    "routes": {
-        "/setup": {
-            "subcmd": "setup",
+    "routes": [
+        {
+            "cmd": "setup",
+            "path": "/setup",
+
             "arguments": [
                 {
                     "flags": [
@@ -81,6 +83,6 @@ Docker-Version: 0.0.9
                 }
             ]
         }
-    }
+    ]
 }
 ```
