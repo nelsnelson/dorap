@@ -1,11 +1,11 @@
-# Docker API Extension Specification Proposal
-­
+### Docker API Extension Specification Proposal
+
 **Revision Version: 1.0**
 <br />
 **©2013-2014 Rackspace, US Inc.**
 
 
-### Brief
+#### Brief
 
 This document lays out initial assumptions and goals accompanied by a basic implementation outline for Docker extensions. The proposal is designed to incite discussion and therefore provides few technical implementation details.
 
@@ -25,7 +25,7 @@ This document lays out initial assumptions and goals accompanied by a basic impl
 * Should allow for flexible scalability of the system to account for deployments both small and large.
 
 
-### The Contract
+#### The Contract
 
 Docker has a strong HTTP contract for it's API at current. Every call presents a well defined operation, making them strong candidates for providing integration points for integration, orchestration and enhancement. Therefore,
 instead of relying on the Docker code base to provide a lower-level API (such as interface or class oriented code extensions) for extensibility, the Docker HTTP API instead should become the provider for this functionality.
@@ -62,6 +62,6 @@ The client may then consume this structure to generate a parser for extension re
 extension intercepts the call it has all of the information needed to perform the requested work.
 
 
-### Appendix
+#### Appendix
 
 1. http://www.enterpriseintegrationpatterns.com/toc.html
