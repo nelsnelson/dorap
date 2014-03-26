@@ -1,8 +1,8 @@
-## Enumerating Docker Extensions via the Docker HTTP API
+### Enumerating Docker Extensions via the Docker HTTP API
 **Revision Version: 1.0**
 **©2013-2014 Rackspace, US Inc.**
 
-### Purpose
+#### Purpose
 
 More complex installations of Docker plugins may require the Docker client
 to expose features of certain plugins, thereby extending the list of
@@ -11,7 +11,7 @@ accomplishing this communication in a lightweight and non-disruptive
 manner to the currently existing Docker API.
 
 
-### API Extensions
+#### API Extensions
 
 Docker extension intermediates may choose to completely reply to a request
 of their own accord. This allows for transparent extension of the Docker
@@ -20,7 +20,7 @@ allows a Docker extension to host additional functionality that goes beyond
 the scope of the original API.
 
 
-### Enumerating Plugins
+#### Enumerating Plugins
 
 In order to enumerate the plugins installed in a given Docker stack, a
 **HEAD** request is sent to **/version**. This request should travel down
@@ -49,7 +49,7 @@ Docker-Version: 0.0.9
 ```
 
 
-### Plugin Description JSON
+#### Plugin Description JSON
 
 ```json
 {
