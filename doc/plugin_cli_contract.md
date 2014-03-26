@@ -38,7 +38,7 @@ The version function should return the plugin's version information.
 
 
 #### Docker URI
-Flags: **-U, --docker-uri**
+Flags: **-u, --docker-uri**
 Argument: `[http|https]://<docker_host>:<port>`
 
 The HTTP/HTTPS URI for the Docker host the plugin is being installed for.
