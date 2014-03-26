@@ -13,6 +13,15 @@ released to you under the [Apache License, Version 2.0](http://www.apache.org/li
 See [LICENSE](LICENSE) for more information
 
 
+### Documentation
+
+Below are documents that have been linked to throughout this README.
+
+* [Docker API Extension Proposal](doc/docker_api_extensions.md)
+* [Docker API Extension Spec](doc/docker_extension_enumeration.md)
+* [Docker Plugin CLI Spec](doc/docker_plugin_cli_contract.md)
+
+
 ### Usage
 
 Dorap follows the [Docker Plugin CLI Expectations](doc/docker_plugin_cli_contract.md)
