@@ -1,4 +1,4 @@
-# dorap - The Docker-Rackspace Plugin
+## dorap - A Docker-Rackspace Integration Plugin
 
 ### About
 
@@ -59,9 +59,9 @@ Now run Docker against the new plugin and cross your fingers!
 docker -H tcp://$DOCKER_IP:8080 ps
 ```
 
-
 ### Development
 
 Pull requests are always welcome! Development of this plugin is sponsored by Rackspace. Feel free to [contact us](mailto:containers@rackspace.com)!
 
+<br />
 <img src="http://c15162226.r26.cf2.rackcdn.com/Rackspace_Cloud_Company_Logo_clr_300x109.jpg" alt="rackspace-logo" />
