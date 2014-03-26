@@ -1,4 +1,4 @@
-# Enumerating Docker Extensions via the Docker HTTP API
+## Enumerating Docker Extensions via the Docker HTTP API
 **Revision Version: 1.0**
 **©2013-2014 Rackspace, US Inc.**
 
