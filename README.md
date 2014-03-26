@@ -55,4 +55,4 @@ docker -H tcp://$DOCKER_IP:8080 ps
 
 Pull requests are always welcome! Development of this plugin is sponsored by Rackspace. Feel free to [contact us](mailto:containers@rackspace.com)!
 
-<img src="http://c15162226.r26.cf2.rackcdn.com/Rackspace_Cloud_Company_Logo_clr_300x109.jpg" alt="rackspace-logo" />
+<img align="middle" src="http://c15162226.r26.cf2.rackcdn.com/Rackspace_Cloud_Company_Logo_clr_300x109.jpg" alt="rackspace-logo" />
