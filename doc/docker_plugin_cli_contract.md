@@ -1,14 +1,14 @@
-# Docker Plugin CLI Expectations
+### Docker Plugin CLI Expectations
 **Revision Version: 1.0**
 **©2013-2014 Rackspace, US Inc.**
 
-### Purpose
+#### Purpose
 
 Docker plugins may accept command line arguments to simplify their
 interactions.
 
 
-### Call Expectations
+#### Call Expectations
 
 Plugins should expect to be called by Docker as the entrypoint to a
 container. Docker will pass all user aguments to the entrypoint for
@@ -16,12 +16,12 @@ consumption. Plugins may specify their own arguments so long as the user
 is aware of them.
 
 
-### Expected Arguments
+#### Expected Arguments
 
 Docker will require that all plugins answer to a set
 of basic command line arguments, They are as follows
 
-#### Help
+##### Help
 Flags: **-h, --help**
 Argument: `None`
 
@@ -30,14 +30,14 @@ that a user with understanding of the plugin's purpose can configure and
 run it.
 
 
-#### Version
+##### Version
 Flags: **-v, --version**
 Argument: `None`
 
 The version function should return the plugin's version information.
 
 
-#### Docker URI
+##### Docker URI
 Flags: **-u, --docker-uri**
 Argument: `[http|https]://<docker_host>:<port>`
 
