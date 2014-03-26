@@ -1,6 +1,6 @@
-## dorap - A Docker-Rackspace Integration Plugin
+### dorap - A Docker-Rackspace Integration Plugin
 
-### About
+#### About
 
 Dorap is a Python implementation of a [Docker API Extension](doc/docker_api_extensions.md)
 utilizing [Pyrox](http://github.com/zinic/pyrox) as the programmable HTTP
@@ -13,7 +13,7 @@ released to you under the [Apache License, Version 2.0](http://www.apache.org/li
 See [LICENSE](LICENSE) for more information
 
 
-### Documentation
+#### Documentation
 
 Below are documents that have been linked to throughout this README.
 
@@ -22,7 +22,7 @@ Below are documents that have been linked to throughout this README.
 * [Docker Plugin CLI Spec](doc/docker_plugin_cli_contract.md)
 
 
-### Usage
+#### Usage
 
 Dorap follows the [Docker Plugin CLI Expectations](doc/docker_plugin_cli_contract.md)
 and offers a few additional command line parameters that may be investigated
@@ -59,7 +59,7 @@ Now run Docker against the new plugin and cross your fingers!
 docker -H tcp://$DOCKER_IP:8080 ps
 ```
 
-### Development
+#### Development
 
 Pull requests are always welcome! Development of this plugin is sponsored by Rackspace. Feel free to [contact us](mailto:containers@rackspace.com)!
 
