@@ -2,3 +2,4 @@ python-keystoneclient>=0.7.1
 psutil>=1.2.1
 chuckbox>=0.1.5
 pyrox>=0.4.0
+setuptools>=3.4.1
